@@ -55,7 +55,7 @@ public class TakePictureActivity extends AppCompatActivity {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
         if (imgFile != null){
-            Uri fileUri = FileProvider.getUriForFile(this,"com.noyashen.demo",imgFile);
+            Uri fileUri = FileProvider.getUriForFile(this,"com.noyashen.camera.demo",imgFile);
             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,fileUri);
             startActivityForResult(takePictureIntent,REQUEST_IMAGE_CAPTURE);
         }
